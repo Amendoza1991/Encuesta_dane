@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Dane AM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logodane.png">
+</head>
+
+<body>
+    <div
+        class="flex justify-between mx-[300px] pt-4 border border-slate-500 mt-4 pb-2 shadow-sm shadow-slate-700 bg-slate-50">
+        <div class="mx-6">
+            <h2 class="text-[12px]">DEPARTAMENTO ADMINISTRATIVO</h2>
+            <h2 class="text-[19px] font-bold">NACIONAL DE ESTADISTICA</h2>
+        </div>
+        <div class="mr-6">
+            <img class="w-[100px] h-[50px] pb-3" src="LOGO...DANE.png" alt="">
+        </div>
+    </div>
+    <form action="encuestadane.php" method="post"
+        class="border border-slate-500 justify-between mx-[300px] shadow-sm shadow-slate-700 mt-2 bg-slate-50">
+        <div class="mx-6 mt-5 flex justify-between">
+            <div class="flex gap-2">
+                <label class="flex gap-2 accent-red-500" for="">Tipo de Documento *
+                    <label for="">TI <input type="radio" value="TI" name="tipod"></label>
+                    <label for="">CE <input type="radio" value="CE" name="tipod"></label>
+                    <label for="">CC <input type="radio" value="CC" name="tipod"></label>
+                    <label for="">RC <input type="radio" value="RC" name="tipod"></label>
+                </label>
+            </div>
+            <div class="flex gap-1">
+                <label for="ndocumen">Numero de Documento *
+                    <input name="ndocumen" class="border border-slate-500 cursor-pointer pl-1" type="number"></label>
+            </div>
+        </div>
+        <div class="mx-6 flex mt-5 justify-between">
+            <div class="flex gap-1">
+                <label for="pnombre">Primer Nombre *
+                    <input name="pnombre" class="border border-slate-500 cursor-pointer pl-1" type="text"></label>
+            </div>
+            <div class="flex gap-1">
+                <label>Segundo Nombre *
+                    <input name="snombre" class="border border-slate-500 cursor-pointer pl-1" type="text"></label>
+            </div>
+        </div>
+        <div class="mx-6 flex mt-8 justify-between">
+            <div class="flex gap-1">
+                <label>Primer Apellido *
+                    <input name="papellido" class="border border-slate-500 cursor-pointer pl-1" type="text"></label>
+            </div>
+            <div class="flex gap-1">
+                <label>Segundo Apellido *
+                    <input name="sapellido" class="border border-slate-500 cursor-pointer pl-1" type="text"></label>
+            </div>
+        </div>
+        <div class="flex justify-between mt-7 mx-6">
+            <div class="flex gap-1">
+                <label>Fecha de Nacimiento *
+                    <input name="fnacimiento" class="border border-slate-500 px-4 cursor-pointer pl-1"
+                        type="date"></label></label>
+            </div>
+            <div>
+                <div class="gap-1 mr-[200px] pb-2">
+                    <h2>Lugar de Nacimiento *</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-2 justify-end mr-6 mt-3">
+            <div class="flex gap-1">
+                <h2>Departamento *</h2>
+                <select class="border border-slate-500 rounded-[5px] text-center" name="dptos" id="">
+                    <option value="val">Option</option>
+                    <option value="cesar">Cesar</option>
+                    <option value="guajira">Guajira</option>
+                    <option value="magdalena">Magdalena</option>
+                </select>
+            </div>
+            <div class="flex gap-1">
+                <h2>Ciudad *</h2>
+                <select class="border border-slate-500 rounded-[5px] text-center" name="ciudades" id="">
+                    <option value="cityy">Option</option>
+                    <option value="valledupar">Valledupar</option>
+                    <option value="riohacha">Riohacha</option>
+                    <option value="santam">Santa Marta</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex justify-between mx-6">
+            <div class="mt-8 flex gap-2">
+                <label class="accent-red-500" for="">Genero * <br>
+                    <label for="">Masculino <input type="radio" value="Masculino" name="tipog"></label>
+                    <label for="">Femenino <input type="radio" value="Femenino" name="tipog"></label>
+
+                </label>
+            </div>
+            <label class="mt-10" for="">Correo Electronico *
+                <input name="correos" class="border border-slate-500 cursor-pointer pl-1" type="text">
+            </label>
+        </div>
+        <div class="mx-6 mt-8 justify-center text-center items-center rounded pb-5">
+            <button type="submit"
+                class="botonE bg-red-600 w-[450px] h-[30px] rounded-[5px] font-bold text-[15px] text-white">ENVIAR</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
